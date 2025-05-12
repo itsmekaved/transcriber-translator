@@ -9,8 +9,8 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-speech_client = speech.SpeechClient.from_service_account_file('key.json')
-translate_client = translate.Client.from_service_account_json('key.json')
+speech_client = speech.SpeechClient.from_service_account_file('/home/kaved/Downloads/key.json')
+translate_client = translate.Client.from_service_account_json('/home/kaved/Downloads/key.json')
 
 def convert_to_mono(input_path, output_path):
     audio = AudioSegment.from_file(input_path)
